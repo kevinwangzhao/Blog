@@ -1,0 +1,23 @@
+<div class="login">
+<% @page_title = 'Admin Login'%>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %><%= link_to 'return', root_path%></div>
+<% end %>
+
+	<%= form_tag(:action=>"attempt_login") do%>
+		<table>
+			<tr>
+				<tb><%= label_tag(:username)%></tb>
+				<tb><%= text_field_tag(:username)%></tb>
+			</tr>
+			<tr>
+				<tb><%= label_tag(:password)%></tb>
+				<tb><%= text_field_tag(:password)%></tb>
+			</tr>
+			<tr>
+				<tb>&nbsp;</tb>
+				<tb><%= submit_tag("Log In")%></tb>
+			</tr>
+		</table>
+	<% end %>
+</div>

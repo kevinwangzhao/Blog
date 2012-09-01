@@ -1,0 +1,41 @@
+<div class="art-Post">
+<div class="art-Post-tl"></div>
+<div class="art-Post-tr"></div>
+<div class="art-Post-bl"></div>
+<div class="art-Post-br"></div>
+<div class="art-Post-tc"></div>
+<div class="art-Post-bc"></div>
+<div class="art-Post-cl"></div>
+<div class="art-Post-cr"></div>
+<div class="art-Post-cc"></div>
+<div class="art-Post-body">
+    <h1>Listing admin_users</h1>
+
+    <table>
+      <tr>
+        <th>User</th>
+        <th>Pass</th>
+        <th>Mail</th>
+        <th>Created at</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @admin_users.each do |admin_user| %>
+      <tr>
+        <td><%= admin_user.username %></td>
+        <td><%= admin_user.password %></td>
+        <td><%= admin_user.mail %></td>
+        <td><%= admin_user.created_at.to_s(:short) %></td>
+        <td><%= link_to 'Show', admin_user %></td>
+        <td><%= link_to 'Edit', edit_admin_user_path(admin_user) %></td>
+        <td><%= link_to 'Destroy', admin_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+
+    <br />
+
+</div>
+</div>

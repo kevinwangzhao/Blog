@@ -1,0 +1,13 @@
+<div class="comment">
+	<h2>Comment</h2>
+
+	<% for comment in @kevin_blog.comments %>
+	   <%= comment.content%>  <hr />
+	<% end %>
+
+
+	<%=form_for @comment.new, :url => comment_path(@kevin_blog), :html => { :method => :put } do |f|%>
+	  <%= f.text_area(:content, :size=>"30x5")%>
+	  <%= f.submit %>
+	<% end %>
+</div>

@@ -1,0 +1,28 @@
+						<div class="art-Block">
+							<div class="art-Block-tl"></div>
+							<div class="art-Block-tr"></div>
+							<div class="art-Block-bl"></div>
+							<div class="art-Block-br"></div>
+							<div class="art-Block-tc"></div>
+							<div class="art-Block-bc"></div>
+							<div class="art-Block-cl"></div>
+							<div class="art-Block-cr"></div>
+							<div class="art-Block-cc"></div>
+							<div class="art-Block-body">
+								<div class="art-BlockHeader">
+									<div class="art-header-tag-icon">
+										<div class="t">Categories</div>
+									</div>
+								</div>
+								<div class="art-BlockContent">
+										<div class="art-BlockContent-body">
+											<ul>
+											<% @categories.each do |category|%>
+												<li class="cat-item cat-item-3"><%= link_to category.category, list_path(category.id)%></li>
+											<% end %>
+											</ul>
+										</div>
+								</div>
+
+							</div>
+						</div>

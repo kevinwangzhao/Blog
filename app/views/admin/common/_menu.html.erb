@@ -1,0 +1,30 @@
+						<div class="art-Block">
+							<div class="art-Block-tl"></div>
+							<div class="art-Block-tr"></div>
+							<div class="art-Block-bl"></div>
+							<div class="art-Block-br"></div>
+							<div class="art-Block-tc"></div>
+							<div class="art-Block-bc"></div>
+							<div class="art-Block-cl"></div>
+							<div class="art-Block-cr"></div>
+							<div class="art-Block-cc"></div>
+							<div class="art-Block-body">
+								<div class="art-BlockHeader">
+									<div class="art-header-tag-icon">
+										<div class="t">Categories</div>
+									</div>
+								</div>
+								<div class="art-BlockContent">
+									<div class="art-BlockContent-body">
+										<ul>
+											<li class="cat-item cat-item-1"><%= link_to "Home", root_path%></li>
+											<li class="cat-item cat-item-1"><%= link_to "Admin Home", admin_root_path%></li>
+											<li class="cat-item cat-item-1"><%= link_to "Manage Admin User", admin_users_path%></li>
+											<li class="cat-item cat-item-1"><%= link_to "Manage Admin Category", admin_categories_path%></li>
+											<li class="cat-item cat-item-1"><%= link_to "Logout", :controller=>"admin/access", :action=>'logout'%></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>

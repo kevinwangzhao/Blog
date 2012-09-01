@@ -1,0 +1,36 @@
+					<% if !session[:user_id] %>
+						<div class="art-Block">
+							<div class="art-Block-tl"></div>
+							<div class="art-Block-tr"></div>
+							<div class="art-Block-bl"></div>
+							<div class="art-Block-br"></div>
+							<div class="art-Block-tc"></div>
+							<div class="art-Block-bc"></div>
+							<div class="art-Block-cl"></div>
+							<div class="art-Block-cr"></div>
+							<div class="art-Block-cc"></div>
+							<div class="art-Block-body">
+								<div class="art-BlockHeader">
+									<div class="art-header-tag-icon">
+										<div class="t">Login</div>
+									</div>
+								</div>
+								<div class="art-BlockContent">
+									<div class="art-BlockContent-body">
+									
+										<%= form_tag(:controller=>"admin/access", :action=>"attempt_login") %>
+											<%= label_tag "user", "username"%>
+											<%= text_field_tag(:username, "", :size=>"16")%>
+											<%= label_tag "pass", "password"%>
+											<%= text_field_tag(:password, "", :size=>"16")%>
+											<%= submit_tag "Login"%>
+										</form>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					<% else %>
+						<%= render :partial => "admin/common/menu"%>
+					<% end %>
+						
