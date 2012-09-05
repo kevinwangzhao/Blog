@@ -14,7 +14,6 @@ Blog::Application.routes.draw do
     match "access/logout"
     
     resources :categories
-    
     resources :users 
   end
   
